@@ -1,0 +1,1503 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: -0.015em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  width: 100%;
+}
+
+/*
+-----------------
+Variables
+-----------------
+*/
+/*
+-----------------
+text styles
+-----------------
+*/
+.homepage h1,
+.contacto h1 {
+  clip: rect(0 0 0 0);
+  border: 0;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  display: block;
+  margin: 0 -1px -1px 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+  width: 50%;
+}
+
+h1 {
+  font-family: "Castoro Titling", "Copperplate", Arial, Helvetica, sans-serif;
+  font-size: 3rem/3.6rem;
+  text-align: center;
+  color: #555;
+  display: block;
+  width: 100%;
+}
+
+h2 {
+  font-family: "Castoro Titling", "Copperplate", Arial, Helvetica, sans-serif;
+  font-size: 2 rem/2.4rem;
+  color: #777;
+}
+
+h3 {
+  font-family: "Castoro Titling", "Copperplate", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem/1.8rem;
+  color: #777;
+}
+
+h4 {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+p {
+  font: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+/*
+-----------------
+button components
+-----------------
+*/
+button,
+section.individual .detail-line .saletype-button,
+section article .property-image .opportunity-label,
+section article .property-image .transaction-button {
+  border: none;
+  color: #fff;
+  background-color: #b62300;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-variant: small-caps;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: auto;
+  font-size: 0.8em;
+  border-radius: 3px;
+  text-align: center;
+}
+
+/*
+-----------------
+header and nav styles
+-----------------
+*/
+@keyframes primary_nav_hover /* Create a keyframe animation called primary_nav_hover */ {
+  0% {
+    /* The start of the animation */
+    transform: translateY(0); /* Default y-axis position */
+    opacity: 1;
+  }
+  49% {
+    /* Between 0% & 49% of the animation */
+    transform: translateY(25%); /* Move the text down 25% on the y-axis */
+    opacity: 0;
+  }
+  50% {
+    /* Between 49% & 50% of the animation */
+    transform: translateY(-25%); /* Move the text 25% up on the y-axis */
+    opacity: 0;
+  }
+  100% {
+    /* Between 50% and 100% of the animation, end */
+    transform: translateY(0); /* Move the text back to the original position */
+    opacity: 1;
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  /*
+  -----------------
+  searchbar in header
+  -----------------
+  */
+}
+.header .logo {
+  width: 30vw;
+  max-width: 300px;
+  height: auto;
+  padding-left: 20px;
+  object-fit: contain;
+}
+.header .logo img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  padding: 20px 0 20px 0;
+}
+.header ul.language {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  list-style: none;
+  width: 20vw;
+  font-size: 0.7rem;
+  max-width: 200px;
+}
+.header ul.language li {
+  padding: 0 3px;
+}
+.header .searchbar {
+  width: 230px;
+  font-size: 14px;
+  height: 20px;
+  padding: 1px 1px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+.header .searchbar input,
+.header .searchbar button,
+.header .searchbar section.individual .detail-line .saletype-button,
+section.individual .detail-line header .searchbar .saletype-button,
+.header .searchbar section article .property-image .opportunity-label,
+.header .searchbar section article .property-image .transaction-button,
+section article .property-image header .searchbar .opportunity-label,
+section article .property-image header .searchbar .transaction-button {
+  float: left;
+}
+.header .searchbar button,
+.header .searchbar section.individual .detail-line .saletype-button,
+section.individual .detail-line header .searchbar .saletype-button,
+.header .searchbar section article .property-image .opportunity-label,
+.header .searchbar section article .property-image .transaction-button,
+section article .property-image header .searchbar .opportunity-label,
+section article .property-image header .searchbar .transaction-button {
+  border: none;
+  background-color: transparent;
+  color: #b62300;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 10px;
+  width: 18px;
+  z-index: 10;
+  margin-left: -25px;
+}
+.header .searchbar input {
+  background: #eee;
+  border: #777;
+  border: 1px solid #aaa;
+  font: 10px/12px "Montserrat", Arial, Helvetica, sans-serif;
+  margin-right: 5px;
+  padding: 2px 2px 2px 8px;
+  width: 230px;
+  height: 22px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+.header .searchbar input:focus {
+  outline: none;
+  box-shadow: 0 0 4px #b62300 inset;
+  -moz-box-shadow: 0 0 4px #b62300 inset;
+  -webkit-box-shadow: 0 0 4px #b62300 inset;
+}
+.header .searchbar input::-webkit-input-placeholder {
+  line-height: 15px;
+}
+.header .searchbar input::-moz-placeholder {
+  line-height: 15px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+nav {
+  font-family: "Castoro Titling", "Copperplate", Arial, Helvetica, sans-serif;
+  color: #b62300;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  width: 45vw;
+}
+nav ul li,
+nav ul li a,
+nav ul li a:hover,
+nav ul li a:visited {
+  list-style-type: none;
+  color: #b62300;
+  text-align: center;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  animation: primary_nav_hover ease-out 400ms 200ms 1;
+}
+
+a.current {
+  color: #777;
+}
+.cart {
+  height: 20px;
+  width: auto;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 240px;
+  width: 20vw;
+}
+
+.footer nav.main {
+  max-width: 85vw;
+}
+.footer nav.main ul {
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.footer nav.main ul li {
+  line-height: 0.8rem;
+}
+
+nav.social {
+  max-width: 80px;
+}
+
+select.orden {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: ccc solid 1px;
+  display: block;
+  position: relative;
+  width: auto;
+  font-size: 14px;
+  height: 22px;
+  padding: 1px 20px 2px 20px;
+  margin: 0px auto 30px;
+  border-radius: 0%;
+  -moz-border-radius: 0%;
+  -webkit-border-radius: 0%;
+  background-color: #fff;
+  font-family: "Castoro Titling", "Copperplate", Arial, Helvetica, sans-serif;
+  font-variant: small-caps;
+  color: #555;
+}
+select.orden::before {
+  display: inline-block;
+  font-style: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: "Amenities";
+}
+
+/* 
+-----------------
+main section
+-----------------
+*/
+.main {
+  margin-top: 30px;
+}
+
+/*
+-----------------
+main section  - properties
+-----------------
+*/
+section {
+  padding: 5vh 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  /*
+  -----------------
+  otros servicios
+  -----------------
+  */
+  /*
+  -----------------
+  nosotros & tasaciones
+  -----------------
+  */
+  /*
+  -----------------
+  contacto
+  -----------------
+  */
+  /*
+  -----------------
+  propiedad individual
+  -----------------
+  */
+}
+section h2 {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 2rem auto;
+}
+section .orden {
+  display: block;
+}
+section.otros-servicios {
+  background-color: #eee;
+}
+section article {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  overflow: hidden;
+}
+section article .property-image {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  position: relative;
+}
+section article .property-image .opportunity-label,
+section article .property-image .transaction-button {
+  min-width: 5vw;
+  position: absolute;
+  z-index: 10;
+  left: 1vw;
+  top: 1vw;
+  padding: 0.5vw;
+  font-family: "Castoro Titling", "Copperplate", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+section article .property-image .transaction-button {
+  min-width: 5vw;
+  left: auto;
+  top: auto;
+  right: 1vw;
+  bottom: 1vw;
+}
+section article h3 {
+  text-transform: lowercase;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-right: 1rem;
+  color: #000;
+  font-variant-caps: titling-caps;
+}
+section article .price {
+  font-family: "Castoro Titling", "Copperplate", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 0.8rem;
+  margin-bottom: 1rem;
+  color: #777;
+  font-variant-caps: titling-caps;
+}
+section article p {
+  color: #000;
+  padding-right: 1rem;
+}
+section.otros-servicios .highlight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-right: 5vw;
+}
+section.otros-servicios .highlight button,
+section.otros-servicios
+  .highlight
+  section.individual
+  .detail-line
+  .saletype-button,
+section.individual
+  .detail-line
+  section.otros-servicios
+  .highlight
+  .saletype-button,
+section.otros-servicios .highlight article .property-image .opportunity-label,
+section.otros-servicios article .property-image .highlight .opportunity-label,
+section.otros-servicios .highlight article .property-image .transaction-button,
+section.otros-servicios article .property-image .highlight .transaction-button {
+  min-width: 100px;
+  height: auto;
+  max-height: 3rem;
+  font-size: 1.2rem;
+}
+section.otros-servicios .highlight button:nth-of-type(2),
+section.otros-servicios
+  .highlight
+  section.individual
+  .detail-line
+  .saletype-button:nth-of-type(2),
+section.individual
+  .detail-line
+  section.otros-servicios
+  .highlight
+  .saletype-button:nth-of-type(2),
+section.otros-servicios
+  .highlight
+  article
+  .property-image
+  .opportunity-label:nth-of-type(2),
+section.otros-servicios
+  article
+  .property-image
+  .highlight
+  .opportunity-label:nth-of-type(2),
+section.otros-servicios
+  .highlight
+  article
+  .property-image
+  .transaction-button:nth-of-type(2),
+section.otros-servicios
+  article
+  .property-image
+  .highlight
+  .transaction-button:nth-of-type(2) {
+  background-color: #fff;
+  color: #b62300;
+  border: #b62300 solid 1px;
+}
+section.otros-servicios .highlight-text {
+  width: 50vw;
+  font-size: 2rem;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+section.nosotros,
+section.tasaciones {
+  display: flex;
+  min-height: 50vh;
+  align-items: center;
+  justify-content: space-between;
+}
+section.nosotros .six-col-image,
+section.tasaciones .six-col-image {
+  width: 38vw;
+  top: 0px !important;
+  padding-top: 0;
+  background-color: #ccc;
+  object-fit: cover;
+}
+section.nosotros .six-col-image img,
+section.tasaciones .six-col-image img {
+  width: 100%;
+  min-height: 100%;
+}
+section.nosotros .section-text,
+section.tasaciones .section-text {
+  display: flex;
+  width: 37vw;
+  flex-direction: column;
+  padding: 1vh 1vw 1vh 1vw;
+}
+section.nosotros .section-text button,
+section.nosotros .section-text section.individual .detail-line .saletype-button,
+section.individual .detail-line section.nosotros .section-text .saletype-button,
+section.tasaciones .section-text button,
+section.tasaciones
+  .section-text
+  section.individual
+  .detail-line
+  .saletype-button,
+section.individual
+  .detail-line
+  section.tasaciones
+  .section-text
+  .saletype-button,
+section.nosotros .section-text article .property-image .opportunity-label,
+section.tasaciones .section-text article .property-image .opportunity-label,
+section.nosotros article .property-image .section-text .opportunity-label,
+section.tasaciones article .property-image .section-text .opportunity-label,
+section.nosotros .section-text article .property-image .transaction-button,
+section.tasaciones .section-text article .property-image .transaction-button,
+section.nosotros article .property-image .section-text .transaction-button,
+section.tasaciones article .property-image .section-text .transaction-button {
+  padding: 2px;
+  min-width: 20%;
+  margin: 2% 40%;
+  padding: 10px;
+}
+section.tasaciones {
+  min-height: 47vh;
+}
+section.tasaciones .section-text {
+  padding: 1vh 1vw;
+}
+section.contacto {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+  min-height: 70vh;
+  height: fit-content;
+  background-color: #eee;
+}
+section.contacto .highlight-text {
+  width: 30vw;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 32px;
+  line-height: 48px;
+  letter-spacing: -0.015em;
+  margin-bottom: 2%;
+  margin-right: 5%;
+  color: #000;
+  vertical-align: text-top;
+}
+section.contacto .contact-form {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: #fff;
+  padding: 0 2vw 2vw 2vw;
+  width: 45vw;
+  min-height: 45vh;
+  height: fit-content;
+  border: #aaa solid 1px;
+  text-align: left;
+}
+section.contacto .contact-form h2 {
+  width: 100%;
+  text-align: center;
+}
+section.contacto .contact-form input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 48%;
+  background-color: #fff;
+  padding: 2px 20px;
+  margin: 2% 2% 2% 0;
+  height: 30px;
+  border: #ccc solid 1px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+section.contacto .contact-form .textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  padding: 2px 20px;
+  width: 98%;
+  height: 100px;
+  border: #ccc solid 1px;
+}
+section.contacto .contact-form label {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: flex;
+  background-color: #fff;
+  padding: 2px 20px;
+  margin: 0;
+  width: auto;
+  justify-self: flex-start;
+}
+section.contacto .contact-form label p {
+  line-height: 100%;
+  margin: 20px 0 0 0;
+  justify-self: flex-start;
+  display: flex;
+}
+section.contacto .contact-form a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section.contacto .contact-form a button,
+section.contacto
+  .contact-form
+  a
+  section.individual
+  .detail-line
+  .saletype-button,
+section.individual
+  .detail-line
+  section.contacto
+  .contact-form
+  a
+  .saletype-button,
+section.contacto .contact-form a article .property-image .opportunity-label,
+section.contacto article .property-image .contact-form a .opportunity-label,
+section.contacto .contact-form a article .property-image .transaction-button,
+section.contacto article .property-image .contact-form a .transaction-button {
+  min-width: 10vw;
+}
+section.individual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+  min-height: 70vh;
+  height: fit-content;
+  background-color: #eee;
+  font-family: "Castoro Titling", "Copperplate", Arial, Helvetica, sans-serif;
+}
+section.individual .photoframe {
+  display: grid;
+  grid-template-areas: "photo1 photo1 photo2" "photo1 photo1 photo3";
+  grid-template-rows: 1fr 1fr;
+  justify-content: stretch;
+  row-gap: 1vw;
+  column-gap: 1vw;
+  min-height: 40vw;
+  max-width: 78vw;
+  overflow: hidden;
+}
+section.individual .photoframe img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+section.individual .photoframe img:nth-of-type(1) {
+  grid-area: photo1;
+  max-width: 62.2vw;
+  height: 100%;
+}
+section.individual .photoframe img:nth-of-type(2) {
+  grid-area: photo2;
+}
+section.individual .photoframe img:nth-of-type(3) {
+  grid-area: photo3;
+}
+section.individual .detail-line {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 20px 0;
+}
+section.individual .detail-line ul {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+section.individual .detail-line ul li {
+  margin-right: 20px;
+}
+section.individual .detail-line h3 {
+  margin-bottom: 0;
+  font-size: 18px;
+  margin-right: 30px;
+}
+section.individual .detail-line .saletype-button {
+  font-size: 1rem;
+  font-family: "Castoro Titling", "Copperplate", Arial, Helvetica, sans-serif;
+  padding: 2px;
+  width: auto;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  margin-right: 50px;
+  border-radius: 5px;
+}
+section .text-block {
+  display: grid;
+  grid-template-areas: "title title title" "text text map";
+  grid-template-rows: auto auto 1fr;
+  row-gap: 1vw;
+  column-gap: 1vw;
+  height: auto;
+}
+section .text-block h1 {
+  grid-area: title;
+  text-align: left;
+  margin-bottom: 0;
+}
+section .text-block h2 {
+  grid-area: sub;
+  font-size: 24px;
+  color: #777;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 0;
+}
+section .text-block p {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+section .text-block .description {
+  display: flex;
+  flex-direction: column;
+  grid-area: text;
+  row-gap: 1vw;
+  column-gap: 1vw;
+  width: 42.2vw;
+  padding-right: 1vw;
+}
+section .maps {
+  grid-area: map;
+  width: 31vw;
+  height: 100%;
+}
+
+/*
+-----------------
+section  - busqueda avanzada
+-----------------
+*/
+section .orden-header {
+  width: 100%;
+}
+section .advanced-searchbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2vw 0;
+}
+section .advanced-searchbox .orden {
+  width: 23%;
+}
+section .advanced-searchbox select.multi-choice:hover {
+  margin: -170px auto 30px;
+  top: 35px;
+  height: 200px;
+  z-index: 2;
+}
+section .advanced-searchbox .scrollbar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+section .advanced-searchbox .scrollbar-container .scrollbar {
+  border: ccc solid 1px;
+  display: flex;
+  position: relative;
+  width: 50%;
+  height: 60px;
+  font-size: 14px;
+  padding: 1px 20px 2px 10px;
+  margin: 30px auto 10px;
+  border-radius: 0%;
+  -moz-border-radius: 0%;
+  -webkit-border-radius: 0%;
+  font-family: "Castoro Titling", "Copperplate", Arial, Helvetica, sans-serif;
+  font-variant: small-caps;
+  color: #777;
+  /*
+  -----------------
+  línea selectora de precio
+  -----------------
+  */
+}
+section .advanced-searchbox .scrollbar-container .scrollbar .line {
+  width: 100%;
+  height: 11px;
+  padding: 1px 20px 2px 20px;
+  border-bottom: solid 2px #b62300;
+}
+section .advanced-searchbox .scrollbar-container .scrollbar .search-price-1 {
+  width: auto;
+  top: 20px;
+  left: 0px;
+  position: absolute;
+  text-align: left;
+}
+section .advanced-searchbox .scrollbar-container .scrollbar .search-price-2 {
+  width: auto;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  text-align: right;
+}
+section .advanced-searchbox .scrollbar-container .scrollbar .price-selector-1 {
+  width: auto;
+  justify-self: flex-start;
+  align-items: center;
+  top: 20px;
+  left: 0px;
+  color: #b62300;
+}
+section .advanced-searchbox .scrollbar-container .scrollbar .price-selector-2 {
+  width: auto;
+  justify-self: flex-end;
+  align-items: center;
+  top: 20px;
+  left: 0px;
+  color: #b62300;
+}
+section .advanced-searchbox button,
+section .advanced-searchbox article .property-image .opportunity-label,
+section article .property-image .advanced-searchbox .opportunity-label,
+section .advanced-searchbox article .property-image .transaction-button,
+section article .property-image .advanced-searchbox .transaction-button,
+section.individual .advanced-searchbox .detail-line .saletype-button,
+section.individual .detail-line .advanced-searchbox .saletype-button {
+  width: auto;
+  min-width: 15%;
+  margin: 20px auto;
+}
+
+/*
+-----------------
+main  - carousel
+-----------------
+*/
+.carousel-container {
+  position: relative;
+}
+.carousel-container .carousel-overlay {
+  position: absolute;
+  background-image: linear-gradient(
+    to left,
+    rgba(245, 246, 252, 0.52),
+    rgba(182, 35, 0, 0.43)
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 10;
+  width: 100vw;
+  height: 55vw;
+}
+.carousel-container .carousel-item {
+  height: 100%;
+  max-height: 40vw;
+  text-align: left;
+}
+.carousel-container .carousel-caption {
+  text-align: left;
+  z-index: 100;
+  width: 40vw;
+  left: 5vw;
+  bottom: 20%;
+  -webkit-box-align: left;
+}
+.carousel-container .carousel-caption a button,
+.carousel-container
+  .carousel-caption
+  a
+  section
+  article
+  .property-image
+  .opportunity-label,
+section
+  article
+  .property-image
+  .carousel-container
+  .carousel-caption
+  a
+  .opportunity-label,
+.carousel-container
+  .carousel-caption
+  a
+  section
+  article
+  .property-image
+  .transaction-button,
+section
+  article
+  .property-image
+  .carousel-container
+  .carousel-caption
+  a
+  .transaction-button,
+.carousel-container
+  .carousel-caption
+  a
+  section.individual
+  .detail-line
+  .saletype-button,
+section.individual
+  .detail-line
+  .carousel-container
+  .carousel-caption
+  a
+  .saletype-button {
+  text-align: left;
+}
+.carousel-container .carousel h4 {
+  text-align: left;
+  /*position: relative;
+  display: block;*/
+  font-size: 3rem;
+  line-height: 3.6rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.carousel-container .carousel-control-next-icon {
+  display: hidden;
+}
+
+/*
+-----------------
+footer
+-----------------
+*/
+footer {
+  margin: 5vh 5vw 3vh 1vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav.social ul {
+  padding-right: 0px;
+  padding-inline-start: 0px;
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+}
+nav.social ul li {
+  padding-right: 20px;
+}
+
+nav.main {
+  min-width: 50vw;
+  max-width: 70vw;
+}
+nav.main ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline-start: 0px;
+}
+nav.main ul li {
+  padding-right: 20px;
+}
+
+/*
+-----------------
+responsive
+-----------------
+*/
+@media (max-width: 1200px) {
+  .header nav ul {
+    justify-content: center;
+  }
+  .header nav ul li {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .header .searchbar {
+    width: 150px;
+  }
+  .header .header-right {
+    min-width: 150px;
+  }
+  .header .searchbar input {
+    width: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    flex-direction: column;
+  }
+  .header nav ul.language {
+    display: none;
+  }
+  .header .top-nav {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #b62300;
+    height: auto;
+    padding: 1em;
+  }
+  .header .logo {
+    padding-left: 2%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    width: auto;
+  }
+  .header .logo img {
+    padding-top: 10px;
+  }
+  .header .searchbar {
+    width: 230px;
+  }
+  .header .header-right {
+    min-width: 230px;
+  }
+  .header .searchbar input {
+    width: 230px;
+  }
+  /*
+  -----------------
+  responsive Hamburger menu
+  -----------------
+  */
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle {
+    display: none;
+  }
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    background-color: #b62300;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  .menu-button::before {
+    content: "";
+    margin-top: -8px;
+  }
+  .menu-button::after {
+    content: "";
+    margin-top: 8px;
+  }
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: #fff;
+  }
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+  .menu-button-container {
+    display: flex;
+  }
+  ul.menu {
+    top: 0;
+    margin: 20px 0 0px 0;
+    left: 0;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border-top: 0.5px solid #ccc;
+    height: 2.5em;
+    padding: 0.5em 0.5em 0 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0 0 0;
+    width: 100%;
+    color: white;
+    background-color: #fff;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+/*
+-----------------
+responsive - carousel
+-----------------
+*/
+@media (max-width: 1200px) {
+  .carousel-container .carousel {
+    height: 35vw;
+  }
+  .carousel-container .carousel h4 {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+  }
+  .carousel-container .carousel-item {
+    height: 35vw;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-container .carousel {
+    height: 55vw;
+  }
+  .carousel-container .carousel h4 {
+    margin-bottom: 5px;
+    font-size: 5vw;
+    line-height: 7vw;
+  }
+  .carousel-container .carousel .highlight-text {
+    padding-bottom: 1vh;
+  }
+  .carousel-container .carousel .carousel-inner {
+    height: 55vw;
+  }
+  .carousel-container .carousel .carousel-inner .carousel-item {
+    height: 55vw;
+  }
+  .carousel-container .carousel .carousel-indicators {
+    display: none;
+  }
+  .carousel-container .carousel .carousel-caption {
+    bottom: -10vw;
+    width: 70vw;
+  }
+}
+/*
+-----------------
+responsive
+-----------------
+*/
+@media (max-width: 1200px) {
+  section {
+    padding: 5vh 1.5vw;
+    /*
+    -----------------
+    propiedad individual
+    -----------------
+    */
+    /*
+    -----------------
+    nosotros & tasaciones
+    -----------------
+    */
+  }
+  section.otros-servicios .highlight .highlight-text {
+    font-size: 1.7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  section.contacto {
+    justify-content: space-around;
+  }
+  section.individual {
+    padding: 30px 3% 3% 3%;
+  }
+  section.individual .photoframe {
+    max-width: 98vw;
+  }
+  section.individual .description {
+    width: 62.2vw;
+  }
+  section.nosotros .six-col-image,
+  section.tasaciones .six-col-image {
+    width: 48vw;
+  }
+  section.nosotros .section-text,
+  section.tasaciones .section-text {
+    width: 47vw;
+  }
+  section.tasaciones {
+    min-height: 47vh;
+  }
+}
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh 1.5vw;
+    width: 100%;
+    /*
+    -----------------
+    responsive section  - busqueda avanzada
+    -----------------
+    */
+    /*
+    ------------------
+    responsive section - otros servicios
+    -------------------
+    */
+    /*
+    -----------------
+    responsive nosotros section - articles
+    -----------------
+    */
+    /* 
+    -----------------
+    responsive propiedad individual section
+    -----------------
+    */
+    /*
+    ------------------
+    responsive section - contacto
+    -------------------
+    */
+  }
+  section h1 {
+    font-size: 2.1rem;
+  }
+  section h2 {
+    font-size: 1.8rem;
+  }
+  section article {
+    width: 90vw;
+  }
+  section article .property-image .opportunity-label,
+  section article .property-image .transaction-button {
+    left: 3vw;
+    top: 3vw;
+    right: auto;
+    bottom: auto;
+    padding: 1vw;
+  }
+  section article .property-image .transaction-button {
+    right: 3vw;
+    bottom: 3vw;
+    left: auto;
+    top: auto;
+    padding: 1vw;
+  }
+  section .advanced-searchbox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2vw 0;
+  }
+  section .advanced-searchbox .orden {
+    width: 70%;
+  }
+  section .advanced-searchbox .scrollbar {
+    width: 80%;
+  }
+  section.otros-servicios .highlight {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 0;
+  }
+  section.otros-servicios .highlight .highlight-text {
+    font-size: 1.6rem;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 5vw;
+  }
+  section.otros-servicios .highlight button,
+  section.otros-servicios .highlight article .property-image .opportunity-label,
+  section.otros-servicios article .property-image .highlight .opportunity-label,
+  section.otros-servicios
+    .highlight
+    article
+    .property-image
+    .transaction-button,
+  section.otros-servicios
+    article
+    .property-image
+    .highlight
+    .transaction-button,
+  section.otros-servicios
+    .highlight
+    section.individual
+    .detail-line
+    .saletype-button,
+  section.individual
+    .detail-line
+    section.otros-servicios
+    .highlight
+    .saletype-button {
+    background-color: #b62300;
+    min-width: 40vw;
+    max-width: 50%;
+    margin: 10px auto 20px;
+  }
+  section.nosotros,
+  section.tasaciones {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 20px 0 20px;
+    width: 100%;
+  }
+  section.nosotros .six-col-image,
+  section.tasaciones .six-col-image {
+    min-height: 10vh;
+    width: 100%;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+  }
+  section.nosotros .section-text,
+  section.tasaciones .section-text {
+    width: 100%;
+  }
+  section.tasaciones {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+  }
+  section.individual {
+    padding: 30px 5vw;
+  }
+  section.individual .text-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  section.individual .text-block h1 {
+    font-size: 1.6rem;
+  }
+  section.individual .text-block h2 {
+    font-size: 1.2rem;
+  }
+  section.individual .text-block .description {
+    width: 100%;
+  }
+  section.individual .photoframe {
+    display: flex;
+    flex-direction: column;
+  }
+  section.individual .photoframe img:nth-of-type(1) {
+    max-width: 100%;
+  }
+  section.individual .maps {
+    width: 100%;
+    height: 50vh;
+  }
+  section .detail-line {
+    align-items: left;
+    padding: 10px 10px 10px 0;
+    max-width: 90vw;
+  }
+  section .detail-line h3 {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin-right: 10px;
+    min-width: 25vw;
+  }
+  section .detail-line .saletype-button {
+    margin-right: 20px !important;
+  }
+  section .detail-line ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    list-style-type: circle;
+    padding-inline-start: 10px;
+    margin-right: 0;
+  }
+  section .detail-line ul li {
+    line-height: 16px;
+    margin: 0 !important;
+  }
+  section.contacto {
+    flex-direction: column;
+    padding: 30px 3% 3vh 3%;
+    min-height: 70vh;
+    height: fit-content;
+    text-align: center;
+  }
+  section.contacto .highlight-text {
+    width: 80vw;
+    text-align: center;
+    margin-right: 0;
+  }
+  section.contacto .contact-form {
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0 5vw 5vw 5vw;
+    width: 90vw;
+    text-align: center;
+    justify-content: center;
+  }
+  section.contacto .contact-form input {
+    width: 80vw;
+  }
+  section.contacto .contact-form a button,
+  section.contacto .contact-form a article .property-image .opportunity-label,
+  section.contacto article .property-image .contact-form a .opportunity-label,
+  section.contacto .contact-form a article .property-image .transaction-button,
+  section.contacto article .property-image .contact-form a .transaction-button,
+  section.contacto
+    .contact-form
+    a
+    section.individual
+    .detail-line
+    .saletype-button,
+  section.individual
+    .detail-line
+    section.contacto
+    .contact-form
+    a
+    .saletype-button {
+    min-width: 25vw;
+    width: auto;
+  }
+}
+/*
+-----------------
+responsive footer
+-----------------
+*/
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+  }
+  footer nav.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: none;
+    min-width: none;
+  }
+  footer nav.main ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+  footer nav.main ul li {
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+  footer nav.main ul li:nth-of-type(2) {
+    padding-right: 0px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
