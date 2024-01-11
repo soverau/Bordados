@@ -4,7 +4,7 @@ import Navbar from "./navbar";
 
 const Header = () => {
   return (
-    <div className="header homepage gx-5 gy-5">
+    <div className="header homepage p-5">
       <Logo />
       <Navbar />
       <CartWidget />

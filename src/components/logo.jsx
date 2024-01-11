@@ -6,7 +6,7 @@ const Logo = () => {
       src={OlamoBrand}
       alt="Logo de Olamo Bordados"
       width="100px"
-      className="col gx-5 gy-5"
+      className="col p=5"
     />
   );
 };
