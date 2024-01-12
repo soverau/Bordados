@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300");
+
 @charset "UTF-8";
 * {
   margin: 0;
@@ -10,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 14px;
+  font-family: "Monserrat", sans-serif;
 }
 
 .root {
@@ -69,6 +73,10 @@ h4 {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
+h5 {
+  font-family: "Castoro Titling", Arial, Helvetica, sans-serif;
+}
+
 p {
   font: "Montserrat", Arial, Helvetica, sans-serif;
 }
@@ -79,6 +87,7 @@ button components
 -----------------
 */
 button,
+.btn,
 section.individual .detail-line .saletype-button,
 section article .property-image .opportunity-label,
 section article .property-image .transaction-button {
@@ -93,6 +102,16 @@ section article .property-image .transaction-button {
   font-size: 0.8em;
   border-radius: 3px;
   text-align: center;
+}
+
+.btn-primary {
+  font-size: 14px;
+}
+
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
+  background-color: #444;
 }
 
 /*
