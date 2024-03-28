@@ -1,6 +1,6 @@
-import Slider1 from "../assets/DMC_HP_HERO_16x9_DESKTOP_810x1440px_PetiteChest.jpg";
-import Slider2 from "../assets/01_DMC_Content-DESK_1440x810px_ECO-VITA-Thread-COLOURS_V2.jpg";
-import Slider3 from "../assets/DMC_Content_Banner_16x9_Ratio_DESKTOP_1440px_Mothers-day_3_Stitch-your-photo.jpg";
+import Slider1 from "/src/assets/images/DMC_HP_HERO_16x9_DESKTOP_810x1440px_PetiteChest.jpg";
+import Slider2 from "/src/assets/images/01_DMC_Content-DESK_1440x810px_ECO-VITA-Thread-COLOURS_V2.jpg";
+import Slider3 from "/src/assets/images/DMC_Content_Banner_16x9_Ratio_DESKTOP_1440px_Mothers-day_3_Stitch-your-photo.jpg";
 
 const Carrusel = () => {
   return (

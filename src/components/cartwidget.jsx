@@ -1,4 +1,4 @@
-import CartImage from "../assets/grocery-store.png";
+import CartImage from "../assets/images/grocery-store.png";
 
 const CartWidget = () => {
   return (

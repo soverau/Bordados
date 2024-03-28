@@ -1,8 +1,8 @@
-import FacebookLogo from "../assets/facebook.jpg";
-import InstagramLogo from "../assets/instagram.jpg";
-import Navbar from "./navbar";
+import FacebookLogo from "../assets/images/facebook.jpg";
+import InstagramLogo from "../assets/images/instagram.jpg";
+import Navbar from "./Navbar";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div className="footer container p-5">
       <div className="row">
@@ -37,5 +37,4 @@ const Footer = () => {
     </div>
   );
 };
-
-export default Footer;
+// export default Footer;

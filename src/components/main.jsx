@@ -1,7 +1,8 @@
+import "../styles/index.css";
 import ItemListContainer from "./ItemListContainer.jsx";
-import Carrusel from "./carrusel";
-import Footer from "./footer";
-import Products from "./products";
+import Carrusel from "./Carrusel.jsx";
+import { Footer } from "./Footer.jsx";
+import Products from "./Products.jsx";
 
 const Main = () => {
   return (

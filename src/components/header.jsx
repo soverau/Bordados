@@ -1,6 +1,6 @@
 import CartWidget from "./cartwidget";
 import Logo from "./logo";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 
 const Header = () => {
   return (

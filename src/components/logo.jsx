@@ -1,4 +1,4 @@
-import OlamoBrand from "../assets/logo.jpg";
+import OlamoBrand from "/src/assets/images/logo.jpg";
 
 const Logo = () => {
   return (
