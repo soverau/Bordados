@@ -8,7 +8,7 @@ const Products = () => {
           <div className="card">
             <img src={Product1} className="card-img-top" alt="..." />
             <div className="card-body">
-              <h5 class="card-title">Kits</h5>
+              <h5 className="card-title">Kits</h5>
               <p className="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
@@ -23,12 +23,12 @@ const Products = () => {
           <div className="card">
             <img src={Product1} className="card-img-top" alt="..." />
             <div className="card-body">
-              <h5 class="card-title">Patrones</h5>
+              <h5 className="card-title">Patrones</h5>
               <p className="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
               </p>
-              <a href="#" class="btn btn-primary">
+              <a href="#" className="btn btn-primary">
                 Comprar
               </a>
             </div>
@@ -38,12 +38,12 @@ const Products = () => {
           <div className="card">
             <img src={Product1} className="card-img-top" alt="..." />
             <div className="card-body">
-              <h5 class="card-title">Hilos</h5>
+              <h5 className="card-title">Hilos</h5>
               <p className="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
               </p>
-              <a href="#" class="btn btn-primary">
+              <a href="#" className="btn btn-primary">
                 Comprar
               </a>
             </div>
@@ -53,12 +53,12 @@ const Products = () => {
           <div className="card">
             <img src={Product1} className="card-img-top" alt="..." />
             <div className="card-body">
-              <h5 class="card-title">Accesorios</h5>
+              <h5 className="card-title">Accesorios</h5>
               <p className="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
               </p>
-              <a href="#" class="btn btn-primary">
+              <a href="#" className="btn btn-primary">
                 Comprar
               </a>
             </div>
