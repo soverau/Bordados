@@ -1,10 +1,12 @@
 import "../styles/index.css";
-import ItemListContainer from "./ItemListContainer.jsx";
+{
+  /*import ItemListContainer from "./ItemListContainer.jsx";*/
+}
 import Carrusel from "./Carrusel.jsx";
 import { Footer } from "./Footer.jsx";
-import Products from "./Products.jsx";
+import ItemListContainer from "./pages/itemListContainer/ItemListContainer.jsx";
 
-const Main = () => {
+const Home = () => {
   return (
     <div className="main">
       <Carrusel />
@@ -14,4 +16,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;
