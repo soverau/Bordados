@@ -1,5 +1,5 @@
-import CartWidget from "./cartwidget";
-import Logo from "./logo";
+import CartWidget from "./Cartwidget";
+import Logo from "./Logo";
 import Navbar from "./Navbar";
 
 const Header = () => {

@@ -1,16 +1,11 @@
-import Product1 from "/src/assets/images/DMC_CATEGORIES_16x9_Ratio_DESKTOP-MOBILE_720px_GOS_KN-1.jpg";
-
-export const ProductCard = () => {
+export const ProductCard = (props) => {
   return (
     <div className="col gx-5 gy-5">
       <div className="card">
-        <img src={Product1} className="card-img-top" alt="..." />
+        <img src={props.image} className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">Kits</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card content.
-          </p>
+          <h5 className="card-title">{props.titulo}</h5>
+          <p className="card-text">{props.descripcion} description</p>
           <a href="#" className="btn btn-primary">
             Comprar
           </a>
