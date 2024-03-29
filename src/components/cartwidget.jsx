@@ -1,10 +1,10 @@
-import CartImage from "../assets/images/grocery-store.png";
+import { FaCartShopping } from "react-icons/fa6";
 
 const CartWidget = () => {
   return (
     <div className="header-right col gx-5 gy-5">
       <nav>
-        3 <img className="cart" src={CartImage} alt="Shopping Cart" />
+        3 <FaCartShopping color="#b62300" />
       </nav>
     </div>
   );
