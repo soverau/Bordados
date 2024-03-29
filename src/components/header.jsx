@@ -1,4 +1,4 @@
-import CartWidget from "./Cartwidget";
+import CartWidget from "./common/cartWidget/CartWidget";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
 

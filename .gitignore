@@ -25,6 +25,6 @@ dist-ssr
 
 src/components/Products.jsx
 src/components/Navbar.jsx
+src/components/Cartwidget.jsx
 src/components/ItemListContainer.jsx
 src/components/Footer.jsx
-
