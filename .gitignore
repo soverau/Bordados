@@ -23,6 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-src/components/products.jsx
+src/components/Products.jsx
 src/components/Navbar.jsx
 src/components/ItemListContainer.jsx
+src/components/Footer.jsx
+

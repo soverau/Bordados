@@ -3,7 +3,7 @@ import "../styles/index.css";
   /*import ItemListContainer from "./ItemListContainer.jsx";*/
 }
 import Carrusel from "./Carrusel.jsx";
-import { Footer } from "./Footer.jsx";
+import Footer from "./layout/footer/Footer.jsx";
 import ItemListContainer from "./pages/itemListContainer/ItemListContainer.jsx";
 
 const Home = () => {
