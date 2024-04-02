@@ -4,7 +4,7 @@ import Product1 from "/src/assets/images/DMC_CATEGORIES_16x9_Ratio_DESKTOP-MOBIL
 const ItemListContainer = ({ greeting }) => {
   return (
     <div className="container">
-      <h1 className="p-5">{greeting}</h1>;
+      <h1 className="p-5">{greeting}</h1>
       <div className="container">
         <div className="row">
           <ProductCard
@@ -16,7 +16,7 @@ const ItemListContainer = ({ greeting }) => {
           />
           <ProductCard
             image={Product1}
-            titulo={"Patrones"}
+            titulo={"Patrone"}
             descripcion={
               "Some quick example text to build on the card title and make up the bulk of the card content."
             }
@@ -30,7 +30,7 @@ const ItemListContainer = ({ greeting }) => {
           />
           <ProductCard
             image={Product1}
-            titulo={"Accesorios"}
+            titulo={"Accesorio"}
             descripcion={
               "Some quick example text to build on the card title and make up the bulk of the card content."
             }
