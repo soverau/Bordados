@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
 
   useEffect(() => {
-    let itemEncontrado = products.find((product) => product.id === +id);
+    let itemEncontrado = products.find((product) => product.id === id);
     const getProduct = new Promise((resolve, reject) => {
       resolve(itemEncontrado);
     });
