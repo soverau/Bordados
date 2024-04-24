@@ -34,7 +34,7 @@ const ItemListContainer = () => {
       .catch((error) => {
         setError(error);
       });
-  }, []);
+  }, [name]);
   console.log(error);
   return <ItemList items={items} error={error} />;
 };
