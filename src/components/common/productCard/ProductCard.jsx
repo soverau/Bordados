@@ -1,14 +1,15 @@
 export const ProductCard = (props) => {
-  const { image, titulo, descripcion } = props;
+  const { img, title, description, price } = props;
   return (
     <div className="col gx-5 gy-5">
       <div className="card">
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={img} className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">{titulo}</h5>
-          <p className="card-text">{descripcion} description</p>
+          <h5 className="card-title">{title}</h5>
+          <p className="card-text">{description} description</p>
+          <p className="card-text">Price: ${price} </p>
           <a href="#" className="btn btn-primary">
-            Comprar
+            See More
           </a>
         </div>
       </div>
