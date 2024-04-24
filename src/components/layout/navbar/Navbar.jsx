@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="top-nav col gx-5 gy-5">
@@ -7,19 +9,19 @@ const Navbar = () => {
       </label>
       <ul className="menu">
         <li>
-          <a href="files/nosotros.html">Nosotros</a>
+          <Link to="/">Todos</Link>
         </li>
         <li>
-          <a href="files/resultados.html">Kits</a>
+          <Link to="/category/Kits">Kits</Link>
         </li>
         <li>
-          <a href="files/resultados.html">Patrones</a>
+          <Link to="/category/Patterns">Patrones</Link>
         </li>
         <li>
-          <a href="files/busqueda.html">Hilos</a>
+          <Link to="/category/Threads">Hilos</Link>
         </li>
         <li>
-          <a href="files/busqueda.html">Accesorios</a>
+          <Link to="/category/Accessories">Accesorios</Link>
         </li>
         <li>
           <a href="files/contacto.html">Contacto</a>

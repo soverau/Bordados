@@ -13,6 +13,7 @@ const ItemList = ({ items, error }) => {
               description={description}
               img={img}
               price={price}
+              id={id}
             />
           );
         })}

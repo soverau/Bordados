@@ -6,7 +6,7 @@ export let products = [
     stock: "2",
     description:
       "This large chest of drawers contains a skein of DMC stranded cotton in every color. An exquisite piece with a vintage design, it will look beautiful in any room. The top of the chest opens to store accessories and notions. Use the 5 pinewood drawers to neatly organize your skeins by color or number with ease. Delivered with 500 skeins and printed color card. Makes a dreamy collectible gift for any stitcher. DMC Embroidery Floss is 100% colorfast and fade-resistant. Dimensions: 18in wide x 11in deep x 14in high, with 5 pinewood drawers. ",
-    category: "Vintage Chests",
+    category: "Accessories",
     img: "https://res.cloudinary.com/dxktpvzbw/image/upload/v1713841828/dmc/7600B_DMC-Chest_4_gszgww.jpg",
   },
   {
@@ -26,17 +26,17 @@ export let products = [
     stock: "10",
     description:
       "Exclusive gold matte finish Collector’s Tin. Embossed with the DMC logo, the Collector’s Tin is the perfect gift containing one skein of each of the new 35 shades! This special set also includes two cross-stitch patterns. Our luscious floss is size 25; 6-strand divisible thread made of double mercerized, long staple 100% cotton fibers in a pull-skein. Each skein is 8.7 yds. (8m) per skein. Dimensions 35 x 20 x 1.3 cm.This large chest of drawers contains a skein of DMC stranded cotton in every color. ",
-    category: "Thread",
+    category: "Threads",
     img: "https://res.cloudinary.com/dxktpvzbw/image/upload/v1713841828/dmc/7600B_DMC-Chest_4_gszgww.jpg",
   },
   {
     id: "4",
-    title: "collector’s tin with 35 new colors",
+    title: "Collector’s tin with 35 new colors",
     price: "200",
     stock: "12",
     description:
       "Exclusive gold matte finish Collector’s Tin. Embossed with the DMC logo, the Collector’s Tin is the perfect gift containing one skein of each of the new 35 shades! This special set also includes two cross-stitch patterns. Our luscious floss is size 25; 6-strand divisible thread made of double mercerized, long staple 100% cotton fibers in a pull-skein. Each skein is 8.7 yds. (8m) per skein. Dimensions 35 x 20 x 1.3 cm.",
-    category: "Vintage Chests",
+    category: "Kits",
     img: "https://res.cloudinary.com/dxktpvzbw/image/upload/v1713841828/dmc/GNBUNDLE2_index_ya9oc4",
   },
 ];
